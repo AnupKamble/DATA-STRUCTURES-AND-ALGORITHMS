@@ -9,16 +9,23 @@ public class LongestReapetingSubstring {
         // System.out.println(str);
 
         HashSet <Character> set = new HashSet <>();
+           
+        int i=0;
+        int j = 0;
+        int n = str.length();
+        int ans =0;
+        while ( i < n && j < n) {
 
-        for ( int i=0; i<str.length(); i++ ) {
+            if ( !set.contains(str.charAt(j))) {
+                set.add(str.charAt(j++));
 
-            if ( !set.contains(str.charAt(i))) {
-                set.add(str.charAt(i));
-
+                ans = Math.max(ans, j - i);
+            } else {
+                set.remove(str.charAt(i++));
             }
     }
 
-    System.out.println(set);
+    System.out.println(ans);
   
     
 }}
