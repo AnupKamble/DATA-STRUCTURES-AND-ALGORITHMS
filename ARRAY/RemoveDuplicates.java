@@ -15,12 +15,8 @@ public class RemoveDuplicates {
 
                 arr[j] = arr[i] ;     
                 System.out.println(arr[j]);         
-            }
-              
-            
+            }       
         }
-   
-            //   System.out.println("new");
         }
     }
 
