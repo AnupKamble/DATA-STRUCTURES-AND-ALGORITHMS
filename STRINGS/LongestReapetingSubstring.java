@@ -14,6 +14,7 @@ public class LongestReapetingSubstring {
         int j = 0;
         int n = str.length();
         int ans =0;
+        
         while ( i < n && j < n) {
 
             if ( !set.contains(str.charAt(j))) {
