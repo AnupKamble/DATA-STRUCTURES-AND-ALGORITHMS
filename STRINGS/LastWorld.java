@@ -13,15 +13,38 @@ public class LastWorld {
         String str = "luffy is still joyboy";
 
 
-      String s = str.trim();
+//       String s = str.trim();
 
-      int lastSpace = s.lastIndexOf(" ");
+//       int lastSpace = s.lastIndexOf(" ");
 
-    //   System.out.println(lastSpace);
-    System.out.println(str.length());
+//     //   System.out.println(lastSpace);
+//     // System.out.println(str.length());
 
-     int count = str.length() - lastSpace -1 ;  
-    System.out.println(count);
+//      int count = str.length() - lastSpace -1 ;  
+//     System.out.println(count);
 
+//     }
+// }
+
+
+
+
+// or //
+
+    int length = 0;
+    int i = str.length() - 1;
+    
+    // Skip any trailing spaces
+    while (i >= 0 && str.charAt(i) == ' ') {
+        i--;
     }
+    
+    // Count the length of the last word
+    while (i >= 0 && str.charAt(i) != ' ') {
+        length++;
+        i--;
+    }
+    
+    System.out.println(length);
+ }
 }
