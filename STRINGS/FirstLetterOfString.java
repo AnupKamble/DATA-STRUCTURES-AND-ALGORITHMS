@@ -1,4 +1,4 @@
-import java.util.*;
+
 
 public class FirstLetterOfString {
  public static void main(String[] args) {
